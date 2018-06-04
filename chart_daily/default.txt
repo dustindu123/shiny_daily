@@ -1,0 +1,3 @@
+user_id listing_id months principal audday bin_value current_term current_default_days owing_principal default_amount_1_1 default_amount_1_5 default_amount_1_10 default_amount_1_30 default_amount_2_30 default_amount_3_30 default_amount_4_30
+82229302 110375812 12 20000 2018-05-02 4 0 2 20000 20000 0 0 0 0 0 0
+63963006 110644718 12 20000 2018-05-03 8 0 1 20000 20000 0 0 0 0 0 0

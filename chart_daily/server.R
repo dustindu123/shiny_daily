@@ -1,22 +1,22 @@
-function(input, output) {
+options(shiny.sanitize.errors = FALSE)
+library(shiny)
+library(shinydashboard)
+library(DT)
 
-  output$main_plot <- renderPlot({
+default=read.table("default.txt",header = TRUE,sep="",fileEncoding="UTF-8") ###正确
 
-    hist(faithful$eruptions,
-      probability = TRUE,
-      breaks = as.numeric(input$n_breaks),
-      xlab = "Duration (minutes)",
-      main = "Geyser eruption duration")
 
-    if (input$individual_obs) {
-      rug(faithful$eruptions)
-    }
+shinyServer(function(input,output){
 
-    if (input$density) {
-      dens <- density(faithful$eruptions,
-          adjust = input$bw_adjust)
-      lines(dens, col = "blue")
-    }
-
+  selectedData <- reactive({
+  default[as.Date(as.character(default$audday)) >= min(input$dates) & as.Date(as.character(default$audday)) <= max(input$dates)&default$current_default_days>=input$num,]
   })
-}
+
+output$rate = renderDataTable({
+df=selectedData()
+df=df[,1:9]
+names(df)=c("uid","listingid","借款期限","借款本金","成交日期","bin","当前期数","逾期天数","应还本金")
+datatable(df)
+})
+  
+  })
