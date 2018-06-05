@@ -4,11 +4,11 @@
 #############################
 
 ###sql */
-drop table appzc.dx_dae_suc_current_default;
-create table appzc.dx_dae_suc_current_default
+drop table if exists appzc.dx_dae_suc_current_default;
+create table if not exists appzc.dx_dae_suc_current_default
   as
 select 
-     lv.user_id 
+     lv.user_id
      ,lv.listing_id
      ,lv.months
      ,lv.principal
@@ -24,6 +24,7 @@ select
      ,isnull(duedate_1m_30_op_pess30 ,0)  default_amount_2_30   /*   2期30+悲观逾期金额      */
      ,isnull(duedate_2m_30_op_pess30 ,0)  default_amount_3_30   /*   3期30+悲观逾期金额      */
      ,isnull(duedate_3m_30_op_pess30 ,0)  default_amount_4_30   /*   4期30+悲观逾期金额      */
+     ,to_date(current_timestamp()) as upd
 
 from
   ddm.listing_vintage as lv
