@@ -1,3 +1,7 @@
-user_id listing_id months principal audday bin_value current_term current_default_days owing_principal default_amount_1_1 default_amount_1_5 default_amount_1_10 default_amount_1_30 default_amount_2_30 default_amount_3_30 default_amount_4_30 upd
-82229302 110375812 12 20000 2018-05-02 4 0 3 20000 20000 0 0 0 0 0 0 2018-06-05
-82411626 110896409 6 10000 2018-05-04 2 0 1 10000 10000 0 0 0 0 0 0 2018-06-05
+user_id listing_id months principal audday bin_value current_term current_default_days owing_principal default_amount_1_1 default_amount_1_5 default_amount_1_10 default_amount_1_30 default_amount_2_30 default_amount_3_30 default_amount_4_30
+73634127 110946037 24 30000 2018-05-05 4 0 1 30000 30000 0 0 0 0 0 0
+82413436 110820536 18 30000 2018-05-05 3 0 1 30000 30000 0 0 0 0 0 0
+82411626 110896409 6 10000 2018-05-04 2 0 2 10000 10000 0 0 0 0 0 0
+82442409 110884045 24 20000 2018-05-05 2 0 1 20000 20000 0 0 0 0 0 0
+82425442 110853071 24 20000 2018-05-05 1 0 1 20000 20000 0 0 0 0 0 0
+82229302 110375812 12 20000 2018-05-02 4 0 4 20000 20000 0 0 0 0 0 0
