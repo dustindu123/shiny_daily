@@ -57,6 +57,7 @@ from appzc.dx_dae_suc_current_default"
 )
 
 df$web=paste0("http://ppdadmin.ppdaicorp.com/user/home?id=",df$user_id,sep="")
-df$web=paste0("<a href='",df$web,"'>",df$web,"</a>")
+#df$web=paste0("<a href='",df$web,"'>",df$web,"</a>")
+df$web <- paste0("<a href='",df$web,"' target='_blank'>",df$web,"</a>")
 ##
 write.table(df,"D:/shiny_daily/chart_daily/default.txt",quote=FALSE,sep=",",row.names=FALSE,fileEncoding = "UTF-8") ##地址可更改 
