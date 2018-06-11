@@ -8,7 +8,7 @@ library(shinydashboard)
 #basic=read.table("basicinfo.txt",header = TRUE,sep="",fileEncoding="UTF-8") ###正确
 #basic$firstchuo=as.character(basic$firstchuo)
 
-default=read.table("default.txt",header = TRUE,sep="",fileEncoding="UTF-8") ###正确
+default=read.table("default.txt",header = TRUE,sep=",",fileEncoding="UTF-8") ###正确
 
 ####
 
@@ -17,7 +17,7 @@ dashboardPage(
  dashboardHeader(title="日常表格"),##标题
  dashboardSidebar(
     a(img(src="pho.jpg",height=120,width=200),
-    href="http://ppdadmin.ppdaicorp.com/home/index",target="black"),
+    href="https://www.google.com.hk",target="black"),
      sidebarMenu(
         menuItem("日常表格", tabName = "日常表格", icon = icon("dashboard"))
 

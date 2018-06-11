@@ -3,7 +3,7 @@ library(shiny)
 library(shinydashboard)
 library(DT)
 
-default=read.table("default.txt",header = TRUE,sep="",fileEncoding="UTF-8") ###正确
+default=read.table("default.txt",header = TRUE,sep=",",fileEncoding="UTF-8") ###正确
 
 
 shinyServer(function(input,output){
@@ -14,9 +14,9 @@ shinyServer(function(input,output){
 
 output$rate = renderDataTable({
 df=selectedData()
-df=df[,1:9]
-names(df)=c("uid","listingid","借款期限","借款本金","成交日期","bin","当前期数","逾期天数","应还本金")
-datatable(df,caption = sprintf("app大额当前逾期人群_更新至 %s",unique(selectedData()$upd)))
-})
-  
+df=df[,c(1:9,18)]
+names(df)=c("uid","listingid","借款期限","借款本金","成交日期","bin","当前期数","逾期天数","应还本金","网址")
+datatable(df,caption = sprintf("app大额当前逾期人群_更新至 %s",unique(selectedData()$upd)),escape = FALSE)
   })
+  
+   })
